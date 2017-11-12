@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .banner{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+
+        }
+
+        .banner > p,.banner > h1{
+            width: 100%;
+            text-align: center;
+        }
+        .banner > p{
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <h1>Задание для HACKATHON</h1>
+        <p>Реализация задачи в консоли</p>
+    </div>
+</body>
+<script defer>
+    function calc(it, time) {
+        setTimeout(function () {
+            console.log(2 * it);
+        }, time);
+    }
+
+    for (i = 0; i < 10; i++) {
+        calc(i, parseInt(Math.random() * 1000));
+    }
+</script>
+</html>
