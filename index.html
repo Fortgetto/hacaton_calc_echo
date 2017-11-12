@@ -27,14 +27,18 @@
     </div>
 </body>
 <script defer>
-    function calc(it, time) {
-        setTimeout(function () {
-            console.log(2 * it);
+    (function () {
+        var i = 0;
+        var time = parseInt(Math.random() * 1000);
+        var cycle = setTimeout(function iter() {
+            time = parseInt(Math.random() * 1000);
+            console.log(i * 2);
+            i++;
+            if (i < 10) {
+                cycle = setTimeout(iter, time);
+            }
         }, time);
-    }
+    })()
 
-    for (i = 0; i < 10; i++) {
-        calc(i, parseInt(Math.random() * 1000));
-    }
 </script>
 </html>
